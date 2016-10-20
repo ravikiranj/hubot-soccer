@@ -46,7 +46,9 @@ module.exports = (robot) ->
         respArray.push "==========="
         for game in data.games
             if game.league? and game.goalsAwayTeam? and game.goalsHomeTeam? and game.time? and game.homeTeamName? and game.awayTeamName?
-                g = "#{game.league}: #{game.homeTeamName} #{game.goalsHomeTeam} : #{game.goalsAwayTeam} #{game.awayTeamName} (#{game.time})"
+                goalsHome = if game.goalsHomeTeam < 0 then "" else game.goalsHomeTeam
+                goalsAway = if game.goalsAwayTeam < 0 then "" else game.goalsAwayTeam
+                g = "#{game.league}: #{game.homeTeamName} #{goalsHome} : #{goalsAway} #{game.awayTeamName} (#{game.time})"
                 respArray.push g
 
         return respArray.join("\n")
