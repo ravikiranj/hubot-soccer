@@ -1,7 +1,7 @@
 {
   "name": "hubot-soccer",
   "description": "Fetches live soccer scores",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "ravikiran.j.127@gmail.com",
   "license": "BSD-2-Clause",
 
