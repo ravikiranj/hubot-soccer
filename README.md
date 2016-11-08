@@ -21,6 +21,9 @@ Then add **hubot-soccer** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
+user1>> hubot football
+hubot>> Spanish Primera Division: FC Barcelona 5 0 Malaga
+
 user1>> hubot soccer
 hubot>> Spanish Primera Division: FC Barcelona 5 0 Malaga
 ```
