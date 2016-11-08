@@ -14,6 +14,8 @@ request = require "request"
 
 module.exports = (robot) ->
     robot.respond /(soccer|football)/i, (msg) ->
+        # Try to use http://api.football-data.org/v1/fixtures?league=PL,BL1,DED,FL1,PD,SA,PPL,CL&timeFrame=p0
+        # 'X-Auth-Token: YOUR_API_TOKEN'
         url = "https://soccer-cli.appspot.com/"
         request.get url, (error, response, data) ->
             if not response or response.statusCode != 200 or not data
